@@ -1,6 +1,12 @@
 import cv2
 import os
+from Gen_train_data import Gen_VOC_data
 
-voc_path = '/media/li/b806bc78-4cbd-4e31-ba5c-e0212d292e731/data/VOC/VOC2007'
-img_file = os.path.join(voc_path,'JPEGImages')
-xml_file = os.path.join(voc_path,'Annotations')
+label_file = 'label_file.txt'
+
+# voc_path = '/home/li/Documents/data/VOC/VOCtrainval_11-May-2012/VOCdevkit/VOC2012'
+# VOC_data = Gen_VOC_data()
+# VOC_data.data_process(voc_path,label_file)
+
+
+
