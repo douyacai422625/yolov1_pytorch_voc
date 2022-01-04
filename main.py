@@ -17,7 +17,7 @@ weight_decay = 5.0e-4
 batch_size = 1
 
 label_file = 'label_file.txt'
-# voc_path = '/media/li/b806bc78-4cbd-4e31-ba5c-e0212d292e732/data/VOC/VOC2012'
+# voc_path = '/home/li/Documents/data/VOC/VOCtrainval_11-May-2012/VOCdevkit/VOC2012'
 # VOC_data = Gen_VOC_data()
 # VOC_data.data_process(voc_path,label_file)
 train_dataset = VOCDataset(label_file,True)
