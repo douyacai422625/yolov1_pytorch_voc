@@ -168,7 +168,7 @@ class VOCDataset(Dataset):
         v = np.clip(v, 0, 255).astype(hsv.dtype)
         hsv = cv2.merge((h, s, v))
         bgr = cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)
-
+        a = 1
         return bgr
 
     def random_hue(self, bgr):
