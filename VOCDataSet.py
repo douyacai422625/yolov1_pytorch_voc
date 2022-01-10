@@ -10,7 +10,7 @@ class VOCDataset(Dataset):
         self.S = grid_size
         self.B = num_bboxes
         self.C = num_classes
-
+        self.image_size = img_size
         self.train_label = train_label
 
         mean_rgb = [122.67891434, 116.66876762, 104.00698793]
