@@ -12,7 +12,6 @@ class VOCDataset(Dataset):
         self.C = num_classes
         self.image_size = img_size
         self.train_label = train_label
-
         mean_rgb = [122.67891434, 116.66876762, 104.00698793]
         self.mean = np.array(mean_rgb, dtype=np.float32)
 
