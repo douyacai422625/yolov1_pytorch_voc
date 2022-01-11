@@ -54,14 +54,15 @@ for epoch in range(num_epoch):
     # 训练
     for imgs, targets in train_loader:
         # Update learning rate.
-        loss.update_lr(optimizer, epoch, float(epoch) / float(len(train_loader) - 1))
-        lr =  loss.get_lr(optimizer)
+        burnin_base = float(epoch) / float(len(train_loader) - 1)
+        criterion.update_lr(optimizer = optimizer, epoch = epoch, burnin_base = burnin_base)
+        lr =  criterion.get_lr(optimizer)
 
         # Load data as a batch.
         batch_size_this_iter = imgs.size(0)
         imgs = Variable(imgs)
         targets = Variable(targets)
-        imgs, targets = imgs.cuda(), targets.cuda()
+        # imgs, targets = imgs.cuda(), targets.cuda()
 
         # Forward to compute loss.
         preds = yolov1_model(imgs)
